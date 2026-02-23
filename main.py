@@ -410,4 +410,15 @@ plt.tight_layout()
 plt.show()
 
 
+import matplotlib.pyplot as plt
 
+plt.figure(figsize=(8,5))
+plt.scatter(data["G2"], data["G3"], alpha=0.6, color="orange")
+plt.xlabel("G2")
+plt.ylabel("G3")
+plt.title("G2 vs G3")
+plt.plot([0,20],[0,20], color="red", linestyle="--")
+
+# مهم: ذخیره کردن نمودار
+plt.savefig("G2_vs_G3.png")  # فایل PNG داخل پوشه پروژه ذخیره می‌شود
+plt.close()  # بستن نمودار تا حافظه آزاد شود
